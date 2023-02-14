@@ -20,12 +20,12 @@ locals {
 }
 
 terraform {
-  required_version = ">=0.13"
+  required_version = ">=0.14"
 
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = ">= 3.53, < 5.0"
+      version = ">= 4.53, < 5.0"
     }
   }
   provider_meta "google" {
@@ -33,6 +33,7 @@ terraform {
   }
 }
 
+/*
 provider "google" {
   alias = "impersonation"
   scopes = [
@@ -53,4 +54,4 @@ provider "google" {
   access_token    = data.google_service_account_access_token.default.access_token
   request_timeout = "60s"
 }
-
+*/
