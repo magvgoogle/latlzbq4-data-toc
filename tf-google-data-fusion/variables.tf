@@ -75,7 +75,7 @@ variable "options" {
 }
 
 variable "data_fusion_service_account" {
-  description = "Google Managed Data Fusion Service Account Email"
+  description = "Google Managed Data Fusion Service Account Email in the Dev Project"
   default = "service-521699674548@gcp-sa-datafusion.iam.gserviceaccount.com"
 }
 
