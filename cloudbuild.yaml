@@ -73,7 +73,7 @@ steps:
         echo "*************** TERRAFORM APPLY ******************"
         echo "******* For Data Fusion ********"
         echo "*************************************************"        
-        terraform apply -auto-approve
+        terraform destroy -auto-approve
       else
         echo "FAILURE IN STEP: TERRAFORM APPLY"
       fi
