@@ -1,0 +1,5 @@
+billing_account = "015A05-FE83C1-4D8EEE"
+default_region  = "us-central1"
+org_id          = "423202022682"
+domain          = "tocdata.joonix.net"
+org_shortname   = "bq4"

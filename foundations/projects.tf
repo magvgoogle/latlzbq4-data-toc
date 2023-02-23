@@ -1,3 +1,4 @@
+/*
 module "logging-jq374-lq533" {
   source  = "terraform-google-modules/project-factory/google"
   version = "~> 12.0"
@@ -84,3 +85,4 @@ module "vpc-host-prod-jq374-lq533" {
   enable_shared_vpc_host_project = true
   billing_account = var.billing_account
 }
+*/

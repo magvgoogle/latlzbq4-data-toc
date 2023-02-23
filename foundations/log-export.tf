@@ -1,3 +1,4 @@
+/*
 module "logsink-423202022682-logbucketsink" {
   source  = "terraform-google-modules/log-export/google"
   version = "~> 7.3.0"
@@ -19,3 +20,4 @@ module "tocdata-joonix-logging-destination" {
   retention_days           = 365
   log_sink_writer_identity = module.logsink-423202022682-logbucketsink.writer_identity
 }
+*/
