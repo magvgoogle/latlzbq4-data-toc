@@ -1,3 +1,4 @@
+/*
 # VPC and Subnets
 module "vpc-host-dev" {
     source  = "terraform-google-modules/network/google"
@@ -315,3 +316,5 @@ resource "google_compute_firewall" "vpc-host-prod-allow-icmp" {
   ]
 }
 # NAT Router and config
+
+*/
