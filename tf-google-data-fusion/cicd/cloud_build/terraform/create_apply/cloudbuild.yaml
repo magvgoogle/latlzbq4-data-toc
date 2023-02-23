@@ -31,7 +31,7 @@ steps:
   - '-c'
   - |
       if [ -d "tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/" ]; then
-        cd tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/
+        cd tf-google-data-fusion
         echo ""
         echo "*************** TERRAFORM INIT ******************"
         echo "******* For Data Fusion ********"
@@ -49,7 +49,7 @@ steps:
   - '-c'
   - | 
       if [ -d "tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/" ]; then
-        cd tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/
+        cd tf-google-data-fusion
         echo ""
         echo "*************** TERRAFORM PLAN ******************"
         echo "******* For Data Fusion ********"
@@ -68,7 +68,7 @@ steps:
   - '-c'
   - | 
       if [ -d "tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/" ]; then
-        cd tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/
+        cd tf-google-data-fusion
         echo ""
         echo "*************** TERRAFORM APPLY ******************"
         echo "******* For Data Fusion ********"
