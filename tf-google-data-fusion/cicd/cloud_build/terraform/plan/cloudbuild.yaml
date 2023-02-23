@@ -30,8 +30,8 @@ steps:
   args: 
   - '-c'
   - |
-      if [ -d "tf-google-data-fusion" ]; then
-        cd tf-google-data-fusion
+      if [ -d "./tf-google-data-fusion/cicd/cloud_build/terraform/plan/" ]; then
+        cd ./tf-google-data-fusion/cicd/cloud_build/terraform/plan/
         echo ""
         echo "*************** TERRAFORM INIT ******************"
         echo "******* For Data Fusion ********"
@@ -48,8 +48,8 @@ steps:
   args: 
   - '-c'
   - | 
-      if [ -d "tf-google-data-fusion" ]; then
-        cd tf-google-data-fusion
+      if [ -d "./tf-google-data-fusion/cicd/cloud_build/terraform/plan/" ]; then
+        cd ./tf-google-data-fusion/cicd/cloud_build/terraform/plan/
         echo ""
         echo "*************** TERRAFORM PLAN ******************"
         echo "******* For Data Fusion ********"
@@ -59,7 +59,3 @@ steps:
         echo "FAILURE IN STEP: TERRAFORM PLAN"
       fi
 # [END tf-plan]
-
-# [START tf-apply]
-
-# [END tf-apply]      

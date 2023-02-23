@@ -30,8 +30,8 @@ steps:
   args: 
   - '-c'
   - |
-      if [ -d "tf-google-data-fusion" ]; then
-        cd tf-google-data-fusion
+      if [ -d "./tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/" ]; then
+        cd ./tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/
         echo ""
         echo "*************** TERRAFORM INIT ******************"
         echo "******* For Data Fusion ********"
@@ -48,8 +48,8 @@ steps:
   args: 
   - '-c'
   - | 
-      if [ -d "tf-google-data-fusion" ]; then
-        cd tf-google-data-fusion
+      if [ -d "./tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/" ]; then
+        cd ./tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/
         echo ""
         echo "*************** TERRAFORM PLAN ******************"
         echo "******* For Data Fusion ********"
@@ -61,5 +61,20 @@ steps:
 # [END tf-plan]
 
 # [START tf-apply]
-
+- id: 'tf apply'
+  name: 'hashicorp/terraform:1.3.0'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - | 
+      if [ -d "./tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/" ]; then
+        cd ./tf-google-data-fusion/cicd/cloud_build/terraform/create_apply/
+        echo ""
+        echo "*************** TERRAFORM APPLY ******************"
+        echo "******* For Data Fusion ********"
+        echo "*************************************************"        
+        terraform apply -auto-approve
+      else
+        echo "FAILURE IN STEP: TERRAFORM APPLY"
+      fi
 # [END tf-apply]      
