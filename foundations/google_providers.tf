@@ -15,7 +15,7 @@
  */
 
 locals {
-  terraform_service_account = "latlzbq4-terraform-sa@latlzbq4-terraform-deployment.iam.gserviceaccount.com"
+  terraform_service_account = "datatoc-latlzbq4-terraform@data-toc-terraform.iam.gserviceaccount.com"
   # https://cloud.google.com/blog/topics/developers-practitioners/using-google-cloud-service-account-impersonation-your-terraform-code
 }
 

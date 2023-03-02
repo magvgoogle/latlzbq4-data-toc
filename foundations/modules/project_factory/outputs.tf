@@ -19,8 +19,3 @@ output "enabled_apis" {
   description = "Enabled APIs in the project"
   value       = module.project.enabled_apis
 }
-
-output "tfstate_bucket" {
-  description = "Terraform state bucket name"
-  value       = module.tfstate_bucket.bucket.name
-}

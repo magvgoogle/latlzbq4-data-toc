@@ -1,7 +1,7 @@
 variable "parent_folder" {
   description = "Optional - if using a folder for testing."
   type        = string
-  default     = ""
+  default     = "organizations/423202022682"
 }
 
 variable "budget_amount" {

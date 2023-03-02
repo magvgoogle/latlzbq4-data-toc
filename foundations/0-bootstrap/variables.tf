@@ -1,6 +1,7 @@
 variable "org_id" {
   description = "GCP Organization ID"
   type        = string
+  default     = "423202022682"
 }
 
 variable "org_shortname" {
@@ -21,7 +22,6 @@ variable "default_region" {
 variable "parent_folder" {
   description = "Optional - if using a folder for testing."
   type        = string
-  default     = ""
 }
 
 variable "domain" {

@@ -28,6 +28,11 @@ output "common_folder" {
   value       = google_folder.common
 }
 
+output "dev_folder" {
+  description = "ID of the development folder"
+  value       = google_folder.development
+}
+
 output "terraform_state_project_id" {
   description = "Project ID of the terraform state project"
   value       = data.google_project.terraform-prj.project_id

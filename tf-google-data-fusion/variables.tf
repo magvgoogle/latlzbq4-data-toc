@@ -17,13 +17,13 @@
 variable "name" {
   description = "Name of the instance."
   type        = string
-  default = "datatoc-datafusion-vm"
+  default     = "datatoc-datafusion-vm"
 }
 
 variable "project" {
   description = "The project ID to deploy to."
   type        = string
-  default = "data-toc-dev"
+  default     = "data-toc-dev"
 }
 
 variable "datafusion_version" {
@@ -35,7 +35,7 @@ variable "datafusion_version" {
 variable "network" {
   description = "Name for VPC to create or reuse to be configured for use with private Data Fusion instance."
   type        = string
-  default = "datatoc-vpc-datafusion"
+  default     = "datatoc-vpc-datafusion"
 }
 
 variable "dataproc_subnet" {
@@ -53,7 +53,7 @@ variable "description" {
 variable "region" {
   description = "The region of the instance."
   type        = string
-  default = "us-central1"
+  default     = "us-central1"
 }
 
 variable "type" {
@@ -76,6 +76,6 @@ variable "options" {
 
 variable "data_fusion_service_account" {
   description = "Google Managed Data Fusion Service Account Email"
-  default = "service-521699674548@gcp-sa-datafusion.iam.gserviceaccount.com"
+  default     = "service-521699674548@gcp-sa-datafusion.iam.gserviceaccount.com"
 }
 

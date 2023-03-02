@@ -2,31 +2,16 @@ data "terraform_remote_state" "org" {
   backend = "gcs"
   config = {
     bucket = "terraform-datatoc-bucket-dev"
-    prefix = "gcp-foundation/1-org/envs/infra"
+    prefix = "gcp-foundation/0-bootstrap"
   }
 }
 
-/*data "terraform_remote_state" "project_scaffolding" {
-  backend = "gcs"
-  config = {
-    bucket = "terraform-datatoc-bucket-dev"
-    prefix = "gcp-foundation/3.5-project-scaffolding/envs/${var.environment}"
-  }
-}*/
-
 locals {
-  folders = data.terraform_remote_state.org.outputs.folders
+  folder = data.terraform_remote_state.org.outputs.dev_folder
 }
 
 data "google_active_folder" "env" {
-  display_name = "fldr-${var.environment}"
-  parent       = var.parent_folder != "" ? "folders/${var.parent_folder}" : local.folders.engineering
+  display_name = "Development"
+  parent       = "organizations/${local.org_id}"
 }
 
-data "terraform_remote_state" "env" {
-  backend = "gcs"
-  config = {
-    bucket = "terraform-datatoc-bucket-dev"
-    prefix = "gcp-foundation/2-environments/envs/dev"
-  }
-}
