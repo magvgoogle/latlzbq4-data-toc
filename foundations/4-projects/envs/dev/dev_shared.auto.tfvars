@@ -1,2 +1,1 @@
-environment      = "dev"
-environment_code = "d"
+../../../dev_shared.auto.tfvars

@@ -36,16 +36,16 @@ module "service_project" {
     "sqladmin.googleapis.com"
   ]))
 
-  billing_account                      = var.billing_account
-  domain                               = var.domain
-  environment                          = var.environment
-  environment_code                     = var.environment_code
-  folder_id                            = var.folder_id
-  org_id                               = var.org_id
-  project_name_suffix                  = var.project_name_suffix
-  team_name                            = var.team_name
-  terraform_service_account            = var.terraform_service_account
-  terraform_state_project_id           = var.terraform_state_project_id
+  billing_account            = var.billing_account
+  domain                     = var.domain
+  environment                = var.environment
+  environment_code           = var.environment_code
+  folder_id                  = var.folder_id
+  org_id                     = var.org_id
+  project_name_suffix        = var.project_name_suffix
+  team_name                  = var.team_name
+  terraform_service_account  = var.terraform_service_account
+  terraform_state_project_id = var.terraform_state_project_id
   // TODO: only share the hybrid or private subnet?
   shared_vpc_subnets   = data.google_compute_network.shared_vpc[0].subnetworks_self_links # Optional: To enable subnetting, to replace to "module.networking_project.subnetwork_self_link"
   svpc_host_project_id = data.google_compute_network.shared_vpc[0].project
